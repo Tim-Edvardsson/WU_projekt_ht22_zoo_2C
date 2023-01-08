@@ -3,47 +3,225 @@
     margin: 0;
 }
 
-.grid_wrapper{
-    min-height: 100vh;
+body, html{
+    height: 150vh;
+}
+
+body, html{
+    height: 150vh;
+}
+
+body{
+    margin: 0;
     display: grid;
-    grid-template-rows: auto auto auto;
-
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 6% 50% 30% auto;
+    grid-template-areas:
+    "header nav"
+    "section section"
+    "main main"
+    "footer footer";
 }
 
-.header{
-    text-align: center;
-    background-color: #f1f1f1;
+#body2{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 6% 40% 40% auto;
+    grid-template-areas:
+    "header header nav nav"
+    "... section section ..."
+    "... main main ..."
+    "footer footer footer footer";
 }
 
-.header a{
+
+h1{
+    font-size: 500%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;
+    padding-left: 9%;
+    text-align: left;
+}
+
+#header_title{
+    font-weight: normal;
+    padding-left: 15%;
+}
+
+header{
+    grid-area: header;
+    background-color: #1ac;
     text-align: center;
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #1ac;
+    position: sticky;
+    top: 0;
+}
+
+ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "hem om anställda";
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.links_nav{
+    list-style: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#hem{
+    grid-area: hem;
+}
+
+#om{
+    grid-area: om;
+}
+
+#anställda{
+    grid-area: anställda;
+}
+
+li a{
     text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+    color: #011830;
+    outline-color: black;
+    outline: auto;
+    outline-width: 1px;
 }
 
-.header a:hover {
+section{
+    grid-area: section;
+    background-color: #91C8FF;
+}
+
+#val_bild{
+    width: 1903px;
+    height: 800px;
+}
+
+h2{
+    font-size: 300%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    padding-top: 2%;
+}
+
+#title_section{
+    grid-area: title;
     text-align: center;
-    background-color: #ddd;
-    color: black;
 }
 
-.header a.active {
+#val_tecknad{
+    grid-area: left;
+    padding-left: 20%;
+}
+
+#text_main{
+    grid-area: middle;
     text-align: center;
-    background-color: dodgerblue;
-    color: white;
+    padding-top: 2% ;
 }
 
-
-.main{
-    background-color: blueviolet;
+#val_tecknad_2{
+    grid-area: right;
+    padding-left: 10%;
 }
 
-.footer{
-    background-color: aqua;
+p{
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: -1px;
+    line-height: 1;
+    padding-top: 2%;
+}
+
+main{
+    grid-area: main;
+    background-color: #7DA9D5;
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    grid-template-rows: 20% auto;
+    grid-template-areas:
+    "title title title"
+    "left middle right";
+}
+
+#logo1{
+    grid-area: logo1;
+    height: 100px;
+    padding-left: 33%;
+    padding-top: 20%;
+}
+
+#text1{
+    grid-area: text1;
+    text-align: center;
+    padding-top: 40%;
+    font-weight: bold;
+}
+
+#logo2{
+    grid-area: logo2;
+    height: 100px;
+    padding-left: 33%;
+    padding-top: 20%;
+}
+
+#text2{
+    grid-area: text2;
+    text-align: center;
+    padding-top: 27.5%;
+    font-weight: bold;
+}
+
+#logo3{
+    grid-area: logo3;
+    height: 100px;
+    padding-left: 32%;
+    padding-top: 17%;
+}
+
+#text3{
+    grid-area: text3;
+    text-align: center;
+    padding-top: 45%;
+    font-weight: bold;
+}
+
+#logo4{
+    grid-area: logo4;
+    height: 100px;
+    padding-left: 25%;
+    padding-top: 15%;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #588EC3;
+    display: grid;
+    grid-template-columns: 14,28% 14,28% 14,28% 14,28% 14,28% 14,28% 14,28%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "logo1 text1 logo2 text2 logo3 text3 logo4";
 }
