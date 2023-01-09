@@ -19,6 +19,36 @@ body{
     "footer footer";
 }
 
+.img_flex{
+    height: 270px;
+    border: 1px solid rgb(17, 122, 145);
+    padding-bottom: 5%;
+}
+
+.container{
+    height: 1163px;
+    width: 1903px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 1.5;
+    background-image: url(../img/val_bakgrund_card.jpg);
+}
+
+.card_flex{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #7DA9D5;
+    border: 5px solid rgb(11, 141, 170);
+    text-align: center
+}
+
 #body2{
     margin: 0;
     display: grid;
@@ -31,16 +61,25 @@ body{
     "footer footer footer footer";
 }
 
-#section2{
-    grid-area: section;
-}
-
 #main2{
     grid-area: main;
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-template-areas: 
-    "compass middle2 telescope"
+    "compass middle2 telescope";
+}
+
+#section2{
+    grid-area: section;
+    background-image: url(../img/karta.jpg);
+    text-align: center;
+}
+
+#hitta_oss{
+    font-size: 15rem;
+    font-weight: 300;
+    padding-top: 12%;
+    opacity: 80%;
 }
 
 #kart_bild{
@@ -58,6 +97,7 @@ body{
 .li_middle2{
     font-size: 3rem;
     margin: 4rem;
+    border: 1px solid rgb(22, 30, 31);
 }
 
 #kompass_bild{
@@ -68,7 +108,7 @@ body{
 
 #telescope_bild{
     grid-area: telescope;
-    height: 350%;
+    height: 340%;
     width: 88%;
     padding-left: 12%;
 }
@@ -91,6 +131,7 @@ h1{
 }
 
 header{
+    z-index: 1;
     grid-area: header;
     background-color: #1ac;
     text-align: center;
@@ -99,6 +140,7 @@ header{
 }
 
 nav{
+    z-index: 1;
     grid-area: nav;
     background-color: #1ac;
     position: sticky;
@@ -108,13 +150,29 @@ nav{
 ul{
     width: 100%;
     display: grid;
-    grid-template-columns: 33% 33% auto;
+    grid-template-columns: 33% 33% 34%;
     grid-template-rows: 100%;
     grid-template-areas:
-    "hem om anställda";
-    justify-content: center;
+    "hem hitta meny";
     align-items: center;
+    justify-content: center;
     padding-top: 2%;
+}
+
+ol{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "hem hitta meny";
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+a:hover{
+    font-size: 102%;
 }
 
 .links_nav{
@@ -125,14 +183,18 @@ ul{
 
 #hem{
     grid-area: hem;
+    padding-left: 45%;
 }
 
-#om{
-    grid-area: om;
+#hitta{
+    width: 50%;
+    grid-area: hitta;
+    padding-left: 20%;
 }
 
-#anställda{
-    grid-area: anställda;
+#meny{
+    grid-area: meny;
+    padding-left: 15%;
 }
 
 li a{
