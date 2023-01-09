@@ -320,7 +320,7 @@ footer{
     background-color: #588EC3;
     display: grid;
     grid-template-columns: 14,28% 14,28% 14,28% 14,28% 14,28% 14,28% 14,28%;
-    grid-template-rows: auto;
+    grid-template-rows: 100%;
     grid-template-areas:
     "logo1 text1 logo2 text2 logo3 text3 logo4";
 }
